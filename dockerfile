@@ -24,11 +24,11 @@ RUN composer install --no-dev --optimize-autoloader
 RUN chmod -R 777 storage bootstrap/cache
 
 # Set Laravel environment
-ENV APP_ENV=production
+
 ENV APP_DEBUG=false
 
 # Command to start the Laravel application
-CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
+CMD ["php", "artisan", "serve"]
 
 # Expose application port
 EXPOSE 8000
